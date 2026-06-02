@@ -32,7 +32,7 @@ const REQUIRED = [
   'ADDRESS_LINE_1', 'PHONE', 'HOURS',
   'PRIMARY_COLOR', 'SECONDARY_COLOR', 'LOGO_IMAGE',
   'HERO_IMAGE', 'HERO_HEADLINE', 'HERO_SUBHEADLINE', 'HERO_SUBTEXT',
-  'STAR_RATING', 'REVIEW_COUNT', 'STUDENT_COUNT',
+  'STAR_RATING', 'REVIEW_COUNT',
   'ABOUT_TEXT',
   'INSTRUCTOR_1_NAME', 'INSTRUCTOR_1_PHOTO',
   'INSTRUCTOR_1_TITLE', 'INSTRUCTOR_1_BIO',
@@ -254,11 +254,14 @@ for (const file of htmlFiles) {
 //   [PROGRAM_DESCRIPTION] → PROGRAM_N_DESCRIPTION
 if (fs.existsSync('program-template.html')) {
   const GENERIC_MAP = [
-    ['PROGRAM_NAME',        n => `PROGRAM_${n}_NAME`],
-    ['AGE_RANGE',           n => `PROGRAM_${n}_AGE_RANGE`],
-    ['PROGRAM_PHOTO',       n => `PROGRAM_${n}_PHOTO`],
-    ['PROGRAM_DAYS',        n => `PROGRAM_${n}_DAYS`],
-    ['PROGRAM_DESCRIPTION', n => `PROGRAM_${n}_DESCRIPTION`],
+    ['PROGRAM_NAME',            n => `PROGRAM_${n}_NAME`],
+    ['AGE_RANGE',               n => `PROGRAM_${n}_AGE_RANGE`],
+    ['PROGRAM_PHOTO',           n => `PROGRAM_${n}_PHOTO`],
+    ['PROGRAM_DAYS',            n => `PROGRAM_${n}_DAYS`],
+    ['PROGRAM_DESCRIPTION',     n => `PROGRAM_${n}_DESCRIPTION`],
+    ['PROGRAM_AUDIENCE_KIDS',   n => `PROGRAM_${n}_AUDIENCE_KIDS`],
+    ['PROGRAM_AUDIENCE_TEENS',  n => `PROGRAM_${n}_AUDIENCE_TEENS`],
+    ['PROGRAM_AUDIENCE_ADULTS', n => `PROGRAM_${n}_AUDIENCE_ADULTS`],
   ];
 
   for (let n = 1; n <= 6; n++) {
@@ -269,14 +272,15 @@ if (fs.existsSync('program-template.html')) {
 
     let page = fs.readFileSync('program-template.html', 'utf8');
 
-    // Map generic tokens to this program's numbered values
+    // Build a page-level data overlay so generic tokens are available to IF blocks
+    const pageData = Object.assign({}, data);
     for (const [generic, getKey] of GENERIC_MAP) {
       const val = data[getKey(n)];
-      if (val) page = page.split(`[${generic}]`).join(String(val));
+      if (val) { pageData[generic] = val; page = page.split(`[${generic}]`).join(String(val)); }
     }
 
-    page = processIfBlocks(page, data);
-    page = replaceTokens(page, data);
+    page = processIfBlocks(page, pageData);
+    page = replaceTokens(page, pageData);
 
     // Collect unfilled tokens from generated pages
     TOKEN_RE.lastIndex = 0;
