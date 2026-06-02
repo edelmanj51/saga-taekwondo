@@ -217,7 +217,7 @@
   <div class="container">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="[SCHOOL_NAME] Home">
-        <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" onerror="this.style.display='none'">
+        <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" style="height:48px;width:auto" onerror="this.style.display='none'">
         [SCHOOL_NAME]
       </a>
       <nav id="main-nav" role="navigation" aria-label="Main navigation">
@@ -427,6 +427,7 @@
      Tokens: [CITY], [SCHOOL_NAME], REVIEWER_N_NAME, REVIEWER_N_TEXT
      SWAP: replace .testi-avatar div with <img> for profile photo
 ============================================================ -->
+<!-- [IF:HAS_REVIEWERS] -->
 <section id="testimonials">
   <div class="container">
     <div class="testi-header reveal">
@@ -499,6 +500,7 @@
     </div>
   </div>
 </section>
+<!-- [/IF:HAS_REVIEWERS] -->
 
 
 <!-- ============================================================
@@ -595,9 +597,10 @@
       <ul>
         <li><a href="program-1.html">[PROGRAM_1_NAME]</a></li>
         <li><a href="program-2.html">[PROGRAM_2_NAME]</a></li>
-        <li><a href="program-3.html"></a></li>
-        <li><a href="program-4.html"></a></li>
-        <li><a href="program-5.html"></a></li>
+        <!-- [IF:PROGRAM_3_NAME] --><li><a href="program-3.html">[PROGRAM_3_NAME]</a></li><!-- [/IF:PROGRAM_3_NAME] -->
+        <!-- [IF:PROGRAM_4_NAME] --><li><a href="program-4.html">[PROGRAM_4_NAME]</a></li><!-- [/IF:PROGRAM_4_NAME] -->
+        <!-- [IF:PROGRAM_5_NAME] --><li><a href="program-5.html">[PROGRAM_5_NAME]</a></li><!-- [/IF:PROGRAM_5_NAME] -->
+        <!-- [IF:PROGRAM_6_NAME] --><li><a href="program-6.html">[PROGRAM_6_NAME]</a></li><!-- [/IF:PROGRAM_6_NAME] -->
       </ul>
     </div>
     <div class="footer-col">

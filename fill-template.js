@@ -169,6 +169,9 @@ for (let n = 1; n <= 10; n++) {
   if (name) data[`R_${n}_INITIAL`] = String(name).charAt(0).toUpperCase();
 }
 
+// HAS_REVIEWERS — set if at least one reviewer exists (used to hide the whole testimonials section)
+if (data.REVIEWER_1_NAME) data.HAS_REVIEWERS = '1';
+
 // GOOGLE_MAPS_EMBED_URL — always computed from address fields
 const addrParts = [data.ADDRESS_LINE_1, data.CITY, data.STATE, data.ZIP].filter(Boolean);
 data.GOOGLE_MAPS_EMBED_URL =
