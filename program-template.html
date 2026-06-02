@@ -217,7 +217,7 @@
   <div class="container">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="[SCHOOL_NAME] Home">
-        <div class="logo-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L20 8.5v7l-8 4-8-4v-7l8-4.32z"/></svg></div>
+        <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" onerror="this.style.display='none'">
         [SCHOOL_NAME]
       </a>
       <nav id="main-nav" role="navigation" aria-label="Main navigation">
@@ -271,9 +271,9 @@
 
 <!-- ============================================================
      SECTION 1: PROGRAM CONTENT — photo + description + challenges
-     Tokens: [PROGRAM_NAME], [MARTIAL_ART] &amp; [MARTIAL_ART], [CITY],
+     Tokens: [PROGRAM_NAME], [MARTIAL_ART], [CITY],
              [AGE_RANGE], (experience: hardcoded "No experience required"),
-             [PROGRAM DESC 1–3], [YOUR CHILD / YOU], [CHALLENGE 1–3]
+             [PROGRAM_DESCRIPTION], [CHALLENGE 1–3]
      SWAP: replace .prog-photo-placeholder div with real <img>
 ============================================================ -->
 <section id="prog-content">
@@ -299,24 +299,24 @@
 
       <!-- RIGHT: H1, meta, description, challenges -->
       <div class="prog-text-col">
-        <h1 class="prog-h1">[PROGRAM_NAME] [MARTIAL_ART] &amp; [MARTIAL_ART] Classes in [CITY]</h1>
+        <h1 class="prog-h1">[PROGRAM_NAME] Classes in [CITY]</h1>
         <p class="prog-meta-row"><strong>Age Range:</strong> [AGE_RANGE] &nbsp;|&nbsp; <strong>Schedule:</strong> [PROGRAM_DAYS] &nbsp;|&nbsp; <strong>Experience:</strong> No experience required</p>
         [PROGRAM_DESCRIPTION]
 
         <div class="challenges-block">
-          <h3>Does [your child / you] face any of these challenges?</h3>
+          <h3>Does your student face any of these challenges?</h3>
           <div class="challenge-list">
             <div class="challenge-item">
               <div class="challenge-x" aria-hidden="true">✗</div>
-              <p class="challenge-text">[CHALLENGE 1 — e.g., "Struggles with confidence or gets pushed around by peers"]</p>
+              <p class="challenge-text">Struggles with confidence or gets pushed around</p>
             </div>
             <div class="challenge-item">
               <div class="challenge-x" aria-hidden="true">✗</div>
-              <p class="challenge-text">[CHALLENGE 2 — e.g., "Has trouble focusing in school or following through on commitments"]</p>
+              <p class="challenge-text">Has trouble focusing in school or following through</p>
             </div>
             <div class="challenge-item">
               <div class="challenge-x" aria-hidden="true">✗</div>
-              <p class="challenge-text">[CHALLENGE 3 — e.g., "Doesn't know how to protect themselves if a situation arises"]</p>
+              <p class="challenge-text">Wants to learn how to protect themselves if a situation arises</p>
             </div>
           </div>
           <a href="#" class="see-pricing-link" onclick="openModal('modal-kit');return false">
@@ -516,42 +516,42 @@
 
     <div class="faq-item reveal" role="listitem">
       <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-        [FAQ Q1 — e.g., "Do I need any experience to join [PROGRAM_NAME]?"]
+        Do I need any experience to join [PROGRAM_NAME]?
         <span class="faq-toggle" aria-hidden="true">+</span>
       </div>
-      <div class="faq-a">[FAQ A1 — e.g., "Absolutely not. [PROGRAM_NAME] is designed to welcome complete beginners. Our instructors guide you through every technique step by step from your very first class."]</div>
+      <div class="faq-a">No experience is required. [PROGRAM_NAME] is designed to welcome complete beginners. Our instructors guide every student through technique step by step from the very first class — you just need to show up.</div>
     </div>
 
     <div class="faq-item reveal" role="listitem">
       <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-        [FAQ Q2 — e.g., "How much does [PROGRAM_NAME] cost?"]
+        How much does [PROGRAM_NAME] cost?
         <span class="faq-toggle" aria-hidden="true">+</span>
       </div>
-      <div class="faq-a">[FAQ A2 — e.g., "Pricing varies based on membership tier and training frequency. Download our Starter Kit for current pricing and any active promotions, or book a free trial and speak with our team."]</div>
+      <div class="faq-a">Pricing depends on membership tier and training frequency. Download our free Starter Kit for current pricing and any active promotions, or book a free intro session and speak directly with our team.</div>
     </div>
 
     <div class="faq-item reveal" role="listitem">
       <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-        [FAQ Q3 — e.g., "How long before I see results?"]
+        How long before I see results?
         <span class="faq-toggle" aria-hidden="true">+</span>
       </div>
-      <div class="faq-a">[FAQ A3 — e.g., "Most students notice improvements in fitness, focus, and technique within the first 30–60 days. Significant confidence gains typically happen within the first 3–6 months of consistent training."]</div>
+      <div class="faq-a">Most students notice real improvements in fitness, focus, and technique within the first 30–60 days. Confidence gains tend to happen faster — many students feel a difference within the first few weeks of consistent training.</div>
     </div>
 
     <div class="faq-item reveal" role="listitem">
       <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-        [FAQ Q4 — e.g., "What should I bring to my first class?"]
+        What should I bring to my first class?
         <span class="faq-toggle" aria-hidden="true">+</span>
       </div>
-      <div class="faq-a">[FAQ A4 — e.g., "Just wear comfortable athletic clothes — shorts and a t-shirt are perfect. No uniform or equipment is needed until you decide to enroll. We'll take care of everything else."]</div>
+      <div class="faq-a">Just wear comfortable athletic clothes — shorts and a t-shirt are perfect. No uniform or equipment is needed until you decide to enroll. We take care of everything else for your first session.</div>
     </div>
 
     <div class="faq-item reveal" role="listitem">
       <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-        [FAQ Q5 — e.g., "How often should I train each week?"]
+        How often should I train each week?
         <span class="faq-toggle" aria-hidden="true">+</span>
       </div>
-      <div class="faq-a">[FAQ A5 — e.g., "We recommend 2–3 classes per week for steady progress. Students who train consistently tend to advance faster and build stronger habits. Our flexible schedule makes it easy to fit training into a busy life."]</div>
+      <div class="faq-a">We recommend 2–3 classes per week for steady progress. Students who train consistently advance faster and build stronger habits. Our schedule is designed to be flexible enough to fit real life.</div>
     </div>
 
   </div>
@@ -579,7 +579,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="logo" aria-label="[SCHOOL_NAME] Home">
-        <div class="logo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L20 8.5v7l-8 4-8-4v-7l8-4.32z"/></svg></div>
+        <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" style="height:36px;width:auto" onerror="this.style.display='none'">
         [SCHOOL_NAME]
       </a>
       <p>[SCHOOL_NAME] is [CITY]'s premier martial arts academy. We develop champions on and off the mats through world-class instruction and a supportive community.</p>
@@ -619,7 +619,7 @@
         <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>[ADDRESS_LINE_1]<br>[CITY], [STATE] [ZIP]</div>
         <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><a href="tel:[PHONE]">[PHONE]</a></div>
         <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:[EMAIL]">[EMAIL]</a></div>
-        <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>[HOURS]</div>
+        <!-- [IF:HOURS_SHORT] --><div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>[HOURS_SHORT]</div><!-- [/IF:HOURS_SHORT] -->
       </address>
     </div>
   </div>
