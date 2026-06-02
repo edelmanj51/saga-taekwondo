@@ -1,0 +1,60 @@
+SLUG: saga-taekwondo-lake-forest
+SCHOOL_NAME: "Saga Taekwondo"
+MARTIAL_ART: Taekwondo
+SITE_URL: https://sagataekwondo.com
+DOMAIN: sagataekwondo.com
+CITY: Lake Forest
+STATE: CA
+ZIP: "92630"
+ADDRESS_LINE_1: "22600 Lambert St Suite 706"
+PHONE: "(949) 987-7333"
+EMAIL: info@sagataekwondo.com
+HOURS: "Mon 3:00–4:00pm & 4:30–4:45pm · Tue 5:15–6:30pm · Wed 3:00–4:00pm & 4:30–4:45pm · Thu 3:00–4:00pm & 5:15–6:30pm · Intro sessions: 15-min one-on-one"
+# NOTE: YEAR_FOUNDED intentionally omitted — school opened November 2025, too new. IF blocks hide year stats.
+PRIMARY_COLOR: "#CDA935"
+SECONDARY_COLOR: "#383838"
+LOGO_IMAGE: brand_assets/logo.png
+FACEBOOK_URL: https://www.facebook.com/profile.php?id=100087238841349
+INSTAGRAM_URL: https://www.instagram.com/sagatkd/?hl=en
+HERO_IMAGE: images/hero/hero.jpg
+HERO_HEADLINE: "Train With Lake Forest's Most Competitive Taekwondo Team"
+HERO_SUBHEADLINE: "Kids, Teens and Adults — All Skill Levels Welcome"
+HERO_SUBTEXT: "Join the fastest-growing Taekwondo academy in Lake Forest. Real skills, real competition, real community. Book your free intro session today."
+# NOTE: STAR_RATING and REVIEW_COUNT could not be verified — Google Places API key invalid. Verify via Google Maps before launch.
+STAR_RATING: "5.0"
+REVIEW_COUNT: "12"
+# NOTE: STUDENT_COUNT confirmed 32 on sales call.
+STUDENT_COUNT: "32"
+ABOUT_TEXT: "Saga Taekwondo is Lake Forest's premier competition-focused Taekwondo academy, proudly serving kids, teens, and adults across South Orange County — including Irvine, Mission Viejo, Foothill Ranch, Laguna Hills, and Aliso Viejo. We combine rigorous technique with championship-level coaching to build confident, disciplined, and competition-ready martial artists at every level."
+INSTRUCTOR_1_NAME: "Sam Sa"
+INSTRUCTOR_1_PHOTO: images/instructor/img-1054.webp
+INSTRUCTOR_1_TITLE: "Owner & Head Instructor"
+INSTRUCTOR_1_BIO: "Sam Sa is a national-level Taekwondo competitor and certified instructor who has coached athletes to podiums at USATKD Nationals and state championships across the country. With deep roots in competitive Taekwondo, Sam founded Saga Taekwondo to bring elite-level training and genuine competitive mentorship to families in Lake Forest and all of South Orange County. His athletes don't just learn to kick — they learn to win, stay focused under pressure, and carry that mindset into every part of their lives. Whether you're stepping on the mat for the first time or preparing for your next national tournament, Sam trains you to be your best."
+PROGRAM_1_NAME: "Kids Taekwondo"
+PROGRAM_1_PHOTO: images/programs/program-1/kids.webp
+PROGRAM_1_AGE_RANGE: "Ages 7–11"
+PROGRAM_1_DAYS: "Mon, Wed & Thu"
+PROGRAM_1_SESSION_LEN: "60-min classes"
+PROGRAM_1_DESCRIPTION: "Build focus, discipline, and real self-defense skills in our kids Taekwondo classes. Every class grows your child's confidence, respect, and ability to stay focused — in school and at home. Action-packed, age-appropriate, and coached by a national-level competitor who knows how to bring out the best in young athletes."
+PROGRAM_2_NAME: "Teen Taekwondo"
+PROGRAM_2_PHOTO: images/programs/program-2/teens.webp
+PROGRAM_2_AGE_RANGE: "Ages 12–17"
+PROGRAM_2_DAYS: "Tue & Thu"
+PROGRAM_2_SESSION_LEN: "75-min classes"
+PROGRAM_2_DESCRIPTION: "Teens thrive at Saga. Our teen Taekwondo classes build strength, coordination, and the mental toughness to handle anything life throws at them. Competition opportunities available for those who want to take it to the next level — with coaches who have guided athletes all the way to national championships."
+PROGRAM_3_NAME: "Adult Taekwondo"
+PROGRAM_3_PHOTO: images/programs/program-3/adults.webp
+PROGRAM_3_AGE_RANGE: "Ages 18+"
+PROGRAM_3_DAYS: "Tue & Thu"
+PROGRAM_3_SESSION_LEN: "75-min classes"
+PROGRAM_3_DESCRIPTION: "Get fit, get focused, and learn real-world self-defense skills alongside a welcoming community of adults. Our Lake Forest adult Taekwondo classes deliver a full-body workout, sharpen your mental clarity, and give you practical techniques that actually work — regardless of your current fitness level or experience."
+# NOTE: All GHL webhook/calendar URLs below are PLACEHOLDER values — replace with actual GHL URLs before launch.
+TRIAL_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/trial
+STARTER_KIT_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/kit
+QUIZ_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/quiz
+FINAL_CTA_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/final
+BOOKING_CALENDAR_URL: https://api.leadconnectorhq.com/widget/group/SAGA_PLACEHOLDER
+PRIVACY_POLICY_URL: https://sagataekwondo.com/privacy-policy/
+REVIEWER_1_NAME: ""
+REVIEWER_1_DATE: ""
+REVIEWER_1_TEXT: ""
