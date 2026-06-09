@@ -42,19 +42,19 @@ PROGRAM_1_DAYS: "Mon–Thu"
 PROGRAM_1_SESSION_LEN: "45-min classes"
 PROGRAM_1_DESCRIPTION: "Build focus, discipline, and real self-defense skills in our kids Taekwondo classes. Every class grows your child's confidence, respect, and ability to stay focused — in school and at home. Action-packed, age-appropriate, and coached by a national-level competitor who knows how to bring out the best in young athletes."
 PROGRAM_2_NAME: "Teen Taekwondo"
-PROGRAM_2_PHOTO: images/programs/program-2/dojo-class.webp
+PROGRAM_2_PHOTO: images/programs/program-2/main.jpg
 PROGRAM_2_AGE_RANGE: "Ages 12–17"
 PROGRAM_2_DAYS: "Mon & Wed"
 PROGRAM_2_SESSION_LEN: "60-min classes"
 PROGRAM_2_DESCRIPTION: "Teens thrive at Saga. Our teen Taekwondo classes build strength, coordination, and the mental toughness to handle anything life throws at them. Competition opportunities available for those who want to take it to the next level — with coaches who have guided athletes all the way to national championships."
 PROGRAM_3_NAME: "Adult Taekwondo"
-PROGRAM_3_PHOTO: images/programs/program-3/adults.webp
+PROGRAM_3_PHOTO: images/programs/program-3/main.jpg
 PROGRAM_3_AGE_RANGE: "Ages 18+"
 PROGRAM_3_DAYS: "Mon & Wed"
 PROGRAM_3_SESSION_LEN: "60-min classes"
 PROGRAM_3_DESCRIPTION: "Get fit, get focused, and learn real-world self-defense skills alongside a welcoming community of adults. Our Lake Forest adult Taekwondo classes deliver a full-body workout, sharpen your mental clarity, and give you practical techniques that actually work — regardless of your current fitness level or experience."
 PROGRAM_4_NAME: "Competition Team"
-PROGRAM_4_PHOTO: images/programs/program-2/teens.webp
+PROGRAM_4_PHOTO: images/programs/program-2/main.jpg
 PROGRAM_4_AGE_RANGE: "Ages 7+"
 PROGRAM_4_DAYS: "Mon–Thu"
 PROGRAM_4_SESSION_LEN: "90-min sessions"
