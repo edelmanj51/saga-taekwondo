@@ -54,7 +54,7 @@ PROGRAM_3_DAYS: "Mon & Wed"
 PROGRAM_3_SESSION_LEN: "60-min classes"
 PROGRAM_3_DESCRIPTION: "Get fit, get focused, and learn real-world self-defense skills alongside a welcoming community of adults. Our Lake Forest adult Taekwondo classes deliver a full-body workout, sharpen your mental clarity, and give you practical techniques that actually work — regardless of your current fitness level or experience."
 PROGRAM_4_NAME: "Competition Team"
-PROGRAM_4_PHOTO: images/programs/program-2/main.jpg
+PROGRAM_4_PHOTO: images/programs/program-2/teens.webp
 PROGRAM_4_AGE_RANGE: "Ages 7+"
 PROGRAM_4_DAYS: "Mon–Thu"
 PROGRAM_4_SESSION_LEN: "90-min sessions"
