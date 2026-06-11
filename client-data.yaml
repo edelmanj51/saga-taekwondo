@@ -10,7 +10,8 @@ ADDRESS_LINE_1: "22600A Lambert St Suite 706"
 PHONE: "(949) 987-7333"
 EMAIL: info@sagataekwondo.com
 HOURS: "Mon 3:00–4:00pm & 4:30–4:45pm · Tue 5:15–6:30pm · Wed 3:00–4:00pm & 4:30–4:45pm · Thu 3:00–4:00pm & 5:15–6:30pm · Intro sessions: 15-min one-on-one"
-HOURS_SHORT: "Mon–Thu (see schedule)"
+# Days open only — no times. Shown in footer strip across all pages.
+DAYS_OPEN: "Mon · Tue · Wed · Thu"
 # NOTE: YEAR_FOUNDED intentionally omitted — school opened November 2025, too new. IF blocks hide year stats.
 PRIMARY_COLOR: "#CDA935"
 SECONDARY_COLOR: "#383838"
