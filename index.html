@@ -503,13 +503,14 @@
       font-size: 15px; font-family: inherit;
     }
     .form-group input::placeholder, .form-single select option { color: rgba(255,255,255,.5); }
-    .form-single select {
-      color: rgba(255,255,255,.7);
-      appearance: none; -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.5)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 14px center;
-      padding-right: 36px; cursor: pointer;
-    }
+    .cselect { position: relative; width: 100%; padding: 13px 16px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.08); color: rgba(255,255,255,.5); font-size: 15px; font-family: inherit; cursor: pointer; display: flex; align-items: center; justify-content: space-between; user-select: none; }
+    .cselect.has-value { color: rgba(255,255,255,.9); }
+    .cselect-arrow { font-size: 11px; opacity: .6; transition: transform .2s; flex-shrink: 0; margin-left: 8px; }
+    .cselect.open .cselect-arrow { transform: rotate(180deg); }
+    .cselect-list { display: none; position: absolute; top: calc(100% + 4px); left: 0; right: 0; background: var(--dark-2); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); list-style: none; margin: 0; padding: 4px 0; z-index: 200; }
+    .cselect.open .cselect-list { display: block; }
+    .cselect-opt { padding: 10px 16px; color: rgba(255,255,255,.8); cursor: pointer; font-size: 15px; }
+    .cselect-opt:hover, .cselect-opt.selected { background: rgba(255,255,255,.08); color: var(--white); }
     .form-consent { font-size: 12px; opacity: .55; line-height: 1.5; margin-bottom: 18px; text-align: left; }
     .form-consent a { text-decoration: underline; }
     .form-submit {
@@ -1459,16 +1460,20 @@
           </div>
         </div>
         <div class="form-single">
-          <select name="program" aria-label="Interested program">
-            <option value="" disabled selected>Interested In…</option>
-            <!-- [IF:PROGRAM_1_NAME] --><option value="program-1">[PROGRAM_1_NAME]</option><!-- [/IF:PROGRAM_1_NAME] -->
-            <!-- [IF:PROGRAM_2_NAME] --><option value="program-2">[PROGRAM_2_NAME]</option><!-- [/IF:PROGRAM_2_NAME] -->
-            <!-- [IF:PROGRAM_3_NAME] --><option value="program-3">[PROGRAM_3_NAME]</option><!-- [/IF:PROGRAM_3_NAME] -->
-            <!-- [IF:PROGRAM_4_NAME] --><option value="program-4">[PROGRAM_4_NAME]</option><!-- [/IF:PROGRAM_4_NAME] -->
-            <!-- [IF:PROGRAM_5_NAME] --><option value="program-5">[PROGRAM_5_NAME]</option><!-- [/IF:PROGRAM_5_NAME] -->
-            <!-- [IF:PROGRAM_6_NAME] --><option value="program-6">[PROGRAM_6_NAME]</option><!-- [/IF:PROGRAM_6_NAME] -->
-            <option value="not-sure">Not Sure Yet</option>
-          </select>
+          <input type="hidden" name="program" id="final-program-val">
+          <div class="cselect" id="final-program" role="combobox" aria-expanded="false" aria-haspopup="listbox" tabindex="0">
+            <span class="cselect-trigger">Interested In…</span>
+            <span class="cselect-arrow">▼</span>
+            <ul class="cselect-list" role="listbox" aria-label="Program selection">
+              <!-- [IF:PROGRAM_1_NAME] --><li class="cselect-opt" role="option" data-value="program-1">[PROGRAM_1_NAME]</li><!-- [/IF:PROGRAM_1_NAME] -->
+              <!-- [IF:PROGRAM_2_NAME] --><li class="cselect-opt" role="option" data-value="program-2">[PROGRAM_2_NAME]</li><!-- [/IF:PROGRAM_2_NAME] -->
+              <!-- [IF:PROGRAM_3_NAME] --><li class="cselect-opt" role="option" data-value="program-3">[PROGRAM_3_NAME]</li><!-- [/IF:PROGRAM_3_NAME] -->
+              <!-- [IF:PROGRAM_4_NAME] --><li class="cselect-opt" role="option" data-value="program-4">[PROGRAM_4_NAME]</li><!-- [/IF:PROGRAM_4_NAME] -->
+              <!-- [IF:PROGRAM_5_NAME] --><li class="cselect-opt" role="option" data-value="program-5">[PROGRAM_5_NAME]</li><!-- [/IF:PROGRAM_5_NAME] -->
+              <!-- [IF:PROGRAM_6_NAME] --><li class="cselect-opt" role="option" data-value="program-6">[PROGRAM_6_NAME]</li><!-- [/IF:PROGRAM_6_NAME] -->
+              <li class="cselect-opt" role="option" data-value="not-sure">Not Sure Yet</li>
+            </ul>
+          </div>
         </div>
         <p class="form-consent">
           By submitting you agree to receive SMS/text messages from [SCHOOL_NAME] at the number provided.
@@ -1969,7 +1974,7 @@
         '<div style="text-align:center;padding:24px 0">' +
         '<div style="font-size:52px;margin-bottom:14px">✅</div>' +
         '<h3 style="color:white;font-size:22px;margin-bottom:8px">You\'re all set!</h3>' +
-        '<p style="opacity:.8;font-size:16px">We\'ll be in touch within 24 hours. Welcome to the family!</p>' +
+        '<p style="opacity:.8;font-size:16px">Keep an eye on your phone — you\'ll hear from us shortly.</p>' +
         '</div>';
     }, 550);
   };
@@ -2023,6 +2028,37 @@
 
   document.querySelectorAll('[onclick*="openModal"]').forEach(function (btn) {
     btn.addEventListener('click', function () { clearTimeout(quizTimer); quizFired = true; });
+  });
+
+  /* ── Custom select dropdowns ────────────────────────────── */
+  document.querySelectorAll('.cselect').forEach(function (cs) {
+    var trigger = cs.querySelector('.cselect-trigger');
+    var hidden  = document.getElementById(cs.id + '-val');
+
+    cs.addEventListener('click', function (e) {
+      var opt = e.target.closest('.cselect-opt');
+      if (opt) {
+        cs.querySelectorAll('.cselect-opt').forEach(function (o) { o.classList.remove('selected'); });
+        opt.classList.add('selected');
+        trigger.textContent = opt.textContent;
+        cs.classList.add('has-value');
+        hidden.value = opt.dataset.value;
+        cs.classList.remove('open');
+        cs.setAttribute('aria-expanded', 'false');
+        return;
+      }
+      var isOpen = cs.classList.toggle('open');
+      cs.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    cs.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cs.click(); }
+      if (e.key === 'Escape') { cs.classList.remove('open'); cs.setAttribute('aria-expanded', 'false'); }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!cs.contains(e.target)) { cs.classList.remove('open'); cs.setAttribute('aria-expanded', 'false'); }
+    });
   });
 
   /* ── Phone formatting ───────────────────────────────────── */
