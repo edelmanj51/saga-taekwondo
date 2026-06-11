@@ -61,11 +61,11 @@ PROGRAM_4_SESSION_LEN: "90-min sessions"
 PROGRAM_4_DESCRIPTION: "Train directly under Sam Sa — a nationally ranked competitor who has coached athletes to USATKD Nationals and state championship podiums. Open to ages 7 and up, no prior tournament experience required. Compete through USATKD, AAU, and regional circuits year-round."
 CLASS_SCHEDULE_HTML: "<table class=\"sched\" role=\"table\" aria-label=\"Weekly class schedule\"><thead><tr><th scope=\"col\">Program</th><th scope=\"col\">Monday</th><th scope=\"col\">Tuesday</th><th scope=\"col\">Wednesday</th><th scope=\"col\">Thursday</th></tr></thead><tbody><tr><td>Tiny Tigers<br><small style=\"color:#64748b\">45 min</small></td><td><span class=\"time-slot kids\">4:00 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot kids\">4:00 PM</span></td><td><span class=\"time-empty\">—</span></td></tr><tr><td>TKD Fundamentals<br><small style=\"color:#64748b\">45 min</small></td><td><span class=\"time-slot kids\">4:45 PM</span></td><td><span class=\"time-slot kids\">4:00 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span></td><td><span class=\"time-slot kids\">4:00 PM</span></td></tr><tr><td>TKD Teen &amp; Adults<br><small style=\"color:#64748b\">60 min</small></td><td><span class=\"time-slot teens\">6:00 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot teens\">6:00 PM</span></td><td><span class=\"time-empty\">—</span></td></tr><tr><td>Comp Team<br><small style=\"color:#64748b\">Ages 7+ · 90 min</small></td><td><span class=\"time-slot comp\">7:00 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot comp\">7:00 PM</span></td><td><span class=\"time-slot comp\">7:00 PM</span></td></tr></tbody></table><p style=\"margin-top:8px;font-size:0.875rem;color:#64748b;font-style:italic\">Fridays and Sundays closed due to special events.</p>"
 # NOTE: All GHL webhook/calendar URLs below are PLACEHOLDER values — replace with actual GHL URLs before launch.
-TRIAL_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/trial
-STARTER_KIT_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/kit
-QUIZ_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/quiz
-FINAL_CTA_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/final
-BOOKING_CALENDAR_URL: https://api.leadconnectorhq.com/widget/group/SAGA_PLACEHOLDER
+TRIAL_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw
+STARTER_KIT_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw
+QUIZ_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw
+FINAL_CTA_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw
+BOOKING_CALENDAR_URL: https://api.leadconnectorhq.com/widget/group/8rYPetZMfFpohWQbHQJl
 GOOGLE_MAPS_EMBED_URL: "https://maps.google.com/maps?q=33.6341079,-117.715649&z=17&output=embed"
 PRIVACY_POLICY_URL: https://sagataekwondo.com/privacy-policy/
 # No reviewers yet — add REVIEWER_1_NAME, REVIEWER_1_DATE, REVIEWER_1_TEXT when Google reviews are verified
