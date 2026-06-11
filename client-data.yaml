@@ -6,7 +6,7 @@ DOMAIN: sagataekwondo.com
 CITY: Lake Forest
 STATE: CA
 ZIP: "92630"
-ADDRESS_LINE_1: "22600 Lambert St Suite 706"
+ADDRESS_LINE_1: "22600A Lambert St Suite 706"
 PHONE: "(949) 987-7333"
 EMAIL: info@sagataekwondo.com
 HOURS: "Mon 3:00–4:00pm & 4:30–4:45pm · Tue 5:15–6:30pm · Wed 3:00–4:00pm & 4:30–4:45pm · Thu 3:00–4:00pm & 5:15–6:30pm · Intro sessions: 15-min one-on-one"
@@ -66,5 +66,6 @@ STARTER_KIT_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHO
 QUIZ_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/quiz
 FINAL_CTA_WEBHOOK_URL: https://services.leadconnectorhq.com/hooks/SAGA_PLACEHOLDER/webhook-trigger/final
 BOOKING_CALENDAR_URL: https://api.leadconnectorhq.com/widget/group/SAGA_PLACEHOLDER
+GOOGLE_MAPS_EMBED_URL: "https://maps.google.com/maps?q=33.6341079,-117.715649&z=17&output=embed"
 PRIVACY_POLICY_URL: https://sagataekwondo.com/privacy-policy/
 # No reviewers yet — add REVIEWER_1_NAME, REVIEWER_1_DATE, REVIEWER_1_TEXT when Google reviews are verified

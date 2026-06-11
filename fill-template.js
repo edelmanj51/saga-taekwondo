@@ -172,10 +172,12 @@ for (let n = 1; n <= 10; n++) {
 // HAS_REVIEWERS — set if at least one reviewer exists (used to hide the whole testimonials section)
 if (data.REVIEWER_1_NAME) data.HAS_REVIEWERS = '1';
 
-// GOOGLE_MAPS_EMBED_URL — always computed from address fields
-const addrParts = [data.ADDRESS_LINE_1, data.CITY, data.STATE, data.ZIP].filter(Boolean);
-data.GOOGLE_MAPS_EMBED_URL =
-  `https://maps.google.com/maps?q=${encodeURIComponent(addrParts.join(', '))}&output=embed`;
+// GOOGLE_MAPS_EMBED_URL — computed from address fields unless explicitly set in client-data.yaml
+if (!data.GOOGLE_MAPS_EMBED_URL) {
+  const addrParts = [data.ADDRESS_LINE_1, data.CITY, data.STATE, data.ZIP].filter(Boolean);
+  data.GOOGLE_MAPS_EMBED_URL =
+    `https://maps.google.com/maps?q=${encodeURIComponent(addrParts.join(', '))}&output=embed`;
+}
 
 // OG_IMAGE — falls back to HERO_IMAGE
 if (!data.OG_IMAGE) data.OG_IMAGE = data.HERO_IMAGE;
