@@ -71,7 +71,7 @@
       cursor: pointer; white-space: nowrap;
     }
     .btn-primary {
-      background: var(--primary); color: var(--dark);
+      background: var(--primary); color: var(--white);
       border: 2px solid var(--primary);
     }
     .btn-primary:hover {
@@ -245,7 +245,7 @@
     .mission-inner h2 {
       font-size: clamp(22px, 3.5vw, 34px); font-weight: 800; letter-spacing: -.5px;
     }
-    .mission-inner h2 em { color: var(--primary); font-style: normal; }
+    .mission-inner h2 em { color: var(--white); font-style: normal; }
     .mission-inner p { margin-top: 10px; font-size: 16px; opacity: .7; }
 
     /* ============================================================
@@ -350,7 +350,7 @@
     .program-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .program-body { padding: 24px; display: flex; flex-direction: column; flex: 1; gap: 12px; }
     .program-tag {
-      display: inline-block; background: var(--secondary); color: white;
+      display: inline-block; background: var(--primary); color: var(--white);
       padding: 4px 12px; border-radius: 20px; font-size: 12px;
       font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
     }
@@ -377,7 +377,7 @@
     .step-card { text-align: center; padding: 32px 24px; }
     .step-num {
       width: 60px; height: 60px; border-radius: 50%;
-      background: var(--primary); color: var(--dark);
+      background: var(--primary); color: var(--white);
       font-size: 24px; font-weight: 900;
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 20px;
@@ -491,7 +491,7 @@
       font-size: clamp(30px, 5vw, 54px); font-weight: 900; line-height: 1.1;
       margin-bottom: 16px;
     }
-    .final-inner h2 em { color: var(--secondary); font-style: normal; }
+    .final-inner h2 em { color: var(--white); font-style: normal; }
     .final-inner > p { font-size: 17px; opacity: .8; margin-bottom: 36px; }
     .final-form { background: rgba(255,255,255,.06); border-radius: var(--radius-lg); padding: 32px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
@@ -581,7 +581,7 @@
       border-radius: var(--radius); display: flex; align-items: center;
       justify-content: center; margin-bottom: 20px;
     }
-    .why-icon svg { width: 26px; height: 26px; fill: var(--dark); }
+    .why-icon svg { width: 26px; height: 26px; fill: var(--white); }
     .why-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
     .why-card p  { font-size: 15px; opacity: .75; line-height: 1.65; }
 
@@ -727,6 +727,8 @@
   <div class="hero-glow" aria-hidden="true"></div>
 
   <div class="hero-content">
+    
+
     <h1 class="hero-title">
       Train With Lake Forest's Most Competitive Taekwondo Team
       <br><span>Kids, Teens and Adults — All Skill Levels Welcome</span>
@@ -761,6 +763,7 @@
 <!-- ============================================================
      SOCIAL PROOF BAR
 ============================================================ -->
+
 
 
 <!-- ============================================================
@@ -827,7 +830,7 @@
         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </div>
       <h3>Serious Black Belt School</h3>
-      <p>Students earn every belt by demonstrating real technique — we don't hand out ranks. With a 5.0-star Google rating and proven results in competition, our standards speak for themselves.</p>
+      <p>Students earn every belt by demonstrating real technique — we don't hand out ranks. With a 5.0-star Google rating, our standards speak for themselves.</p>
     </div>
 
     <div class="why-card reveal">
@@ -1205,7 +1208,7 @@
         <img src="brand_assets/logo.png" alt="" aria-hidden="true" style="height:36px;width:auto" onerror="this.style.display='none'">
         Saga Taekwondo
       </a>
-      <p>Saga Taekwondo is Lake Forest's premier competition-focused Taekwondo academy, proudly serving kids, teens, and adults across South Orange County — including Irvine, Mission Viejo, Foothill Ranch, Laguna Hills, and Aliso Viejo. We combine rigorous technique with championship-level coaching to build confident, disciplined, and competition-ready martial artists at every level.</p>
+      <p>Saga Taekwondo develops confidence, discipline, and real self-defense skills in students of all ages and experience levels.</p>
       <div class="social-links">
         
         <a href="https://www.facebook.com/profile.php?id=100087238841349" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
@@ -1293,8 +1296,10 @@
       <form class="modal-form" id="form-trial" onsubmit="submitModal(event,'modal-trial','https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw')">
         <input type="hidden" name="lead_source" value="trial">
         <div class="field">
-          <label for="tr-name">Name</label>
-          <input id="tr-name" type="text" name="name" placeholder="Your full name" required autocomplete="name">
+          <input type="text" name="firstName" placeholder="First Name" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <input type="text" name="lastName" placeholder="Last Name" required autocomplete="family-name">
         </div>
         <div class="field">
           <label for="tr-email">Email</label>
@@ -1312,6 +1317,8 @@
             <option value="program-2">Teen Taekwondo</option>
             <option value="program-3">Adult Taekwondo</option>
             <option value="program-4">Competition Team</option>
+            
+            
             <option value="not-sure">Not Sure</option>
           </select>
         </div>
@@ -1347,8 +1354,10 @@
       <form class="modal-form" id="form-kit" onsubmit="submitModal(event,'modal-kit','https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw')">
         <input type="hidden" name="lead_source" value="starter_kit">
         <div class="field">
-          <label for="kit-name">Name</label>
-          <input id="kit-name" type="text" name="name" placeholder="Your full name" required autocomplete="name">
+          <input type="text" name="firstName" placeholder="First Name" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <input type="text" name="lastName" placeholder="Last Name" required autocomplete="family-name">
         </div>
         <div class="field">
           <label for="kit-email">Email</label>
@@ -1366,6 +1375,8 @@
             <option value="program-2">Teen Taekwondo</option>
             <option value="program-3">Adult Taekwondo</option>
             <option value="program-4">Competition Team</option>
+            
+            
             <option value="not-sure">Not Sure</option>
           </select>
         </div>
@@ -1476,8 +1487,10 @@
         <input type="hidden" name="lead_source" value="quiz">
         <input type="hidden" name="quizAnswers" id="quiz-answers">
         <div class="field">
-          <label for="qz-name">Name</label>
-          <input id="qz-name" type="text" name="name" placeholder="Full name" required autocomplete="name">
+          <input type="text" name="firstName" placeholder="First Name" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <input type="text" name="lastName" placeholder="Last Name" required autocomplete="family-name">
         </div>
         <div class="field">
           <label for="qz-email">Email</label>
