@@ -295,6 +295,7 @@
       <h2 class="modal-title" id="title-trial">Book Your Free Trial Today</h2>
       <p class="modal-sub">No commitment. No experience needed. Just show up and try it free.</p>
       <form class="modal-form" onsubmit="submitModal(event,'modal-trial','[TRIAL_WEBHOOK_URL]')">
+        <input type="hidden" name="lead_source" value="trial">
         <div class="field"><input type="text" name="first_name" placeholder="First Name" required autocomplete="given-name"></div>
         <div class="field"><input type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name"></div>
         <div class="field"><label for="tr-email">Email</label><input id="tr-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
@@ -316,6 +317,7 @@
       <h2 class="modal-title" id="title-kit">Looking For Our Pricing?</h2>
       <p class="modal-sub">Fill out the form below and one of our coaches will send you our pricing, class schedule, and EXCLUSIVE promo information for our classes.</p>
       <form class="modal-form" onsubmit="submitModal(event,'modal-kit','[STARTER_KIT_WEBHOOK_URL]')">
+        <input type="hidden" name="lead_source" value="starter_kit">
         <div class="field"><input type="text" name="first_name" placeholder="First Name" required autocomplete="given-name"></div>
         <div class="field"><input type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name"></div>
         <div class="field"><label for="kit-email">Email</label><input id="kit-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
@@ -359,6 +361,18 @@
     setTimeout(function(){if(mid==='modal-trial'){window.location.href='[BOOKING_CALENDAR_URL]';}else{var b=document.getElementById(mid+'-body'),s=document.getElementById(mid+'-success');if(b)b.style.display='none';if(s)s.style.display='block';}},550);
   };
 }());
-</script>
+
+  /* ── Phone auto-format (10-digit, (XXX) XXX-XXXX) ───────── */
+  document.addEventListener('input', function(e) {
+    if (e.target.type !== 'tel') return;
+    var digits = e.target.value.replace(/\D/g, '').slice(0, 10);
+    var out = '';
+    if (digits.length > 0) out = '(' + digits.slice(0, 3);
+    if (digits.length >= 4) out += ') ' + digits.slice(3, 6);
+    if (digits.length >= 7) out += '-' + digits.slice(6, 10);
+    else if (digits.length >= 4) out += digits.slice(6);
+    e.target.value = out;
+  });
+  </script>
 </body>
 </html>

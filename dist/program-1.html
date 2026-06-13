@@ -529,6 +529,7 @@
       <h2 class="modal-title" id="title-trial">Book Your Free Trial Today</h2>
       <p class="modal-sub">No commitment. No experience needed. Just show up and try it free.</p>
       <form class="modal-form" onsubmit="submitModal(event,'modal-trial','https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw')">
+        <input type="hidden" name="lead_source" value="trial">
         <div class="field"><input type="text" name="first_name" placeholder="First Name" required autocomplete="given-name"></div>
         <div class="field"><input type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name"></div>
         <div class="field"><label for="tr-email">Email</label><input id="tr-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
@@ -550,6 +551,7 @@
       <h2 class="modal-title" id="title-kit">Get Pricing + Schedule</h2>
       <p class="modal-sub">We'll send you our full program guide, pricing, and weekly schedule.</p>
       <form class="modal-form" onsubmit="submitModal(event,'modal-kit','https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw')">
+        <input type="hidden" name="lead_source" value="starter_kit">
         <div class="field"><input type="text" name="first_name" placeholder="First Name" required autocomplete="given-name"></div>
         <div class="field"><input type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name"></div>
         <div class="field"><label for="kit-email">Email</label><input id="kit-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
@@ -636,6 +638,7 @@
       <h2 class="modal-title">Almost There!</h2>
       <p class="modal-sub">We found the perfect program for you. Enter your info and we'll send your personalized recommendation.</p>
       <form class="modal-form" id="form-quiz" onsubmit="submitModal(event,'modal-quiz','https://services.leadconnectorhq.com/hooks/1H9yAYZPuq2ms6wbcgkO/webhook-trigger/HnZDhpIxfWSXC1N4LiOw')">
+        <input type="hidden" name="lead_source" value="quiz">
         <input type="hidden" name="quizAnswers" id="quiz-answers">
         <div class="field"><input type="text" name="first_name" placeholder="First Name" required autocomplete="given-name"></div>
         <div class="field"><input type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name"></div>
@@ -716,6 +719,18 @@
     if(stepId==='qz-4')document.getElementById('quiz-answers').value=JSON.stringify(quizData);
   };
 }());
-</script>
+
+  /* ── Phone auto-format (10-digit, (XXX) XXX-XXXX) ───────── */
+  document.addEventListener('input', function(e) {
+    if (e.target.type !== 'tel') return;
+    var digits = e.target.value.replace(/\D/g, '').slice(0, 10);
+    var out = '';
+    if (digits.length > 0) out = '(' + digits.slice(0, 3);
+    if (digits.length >= 4) out += ') ' + digits.slice(3, 6);
+    if (digits.length >= 7) out += '-' + digits.slice(6, 10);
+    else if (digits.length >= 4) out += digits.slice(6);
+    e.target.value = out;
+  });
+  </script>
 </body>
 </html>

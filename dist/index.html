@@ -1801,7 +1801,19 @@
   });
 
 }());
-</script>
+
+  /* ── Phone auto-format (10-digit, (XXX) XXX-XXXX) ───────── */
+  document.addEventListener('input', function(e) {
+    if (e.target.type !== 'tel') return;
+    var digits = e.target.value.replace(/\D/g, '').slice(0, 10);
+    var out = '';
+    if (digits.length > 0) out = '(' + digits.slice(0, 3);
+    if (digits.length >= 4) out += ') ' + digits.slice(3, 6);
+    if (digits.length >= 7) out += '-' + digits.slice(6, 10);
+    else if (digits.length >= 4) out += digits.slice(6);
+    e.target.value = out;
+  });
+  </script>
 
 </body>
 </html>
