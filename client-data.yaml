@@ -3,6 +3,10 @@ SCHOOL_NAME: "Saga Taekwondo"
 MARTIAL_ART: Taekwondo
 SITE_URL: https://sagataekwondo.com
 DOMAIN: sagataekwondo.com
+# Google Search Console verification. Paste ONLY the content value from Google's
+# "HTML tag" method (google-site-verification=... ) — not the whole <meta> tag.
+# Leave empty until the custom domain actually serves THIS Cloudflare Pages build.
+GSC_VERIFICATION: "j8_wbKWzhZTI-nSjq3kHQeKkVyLJ598sasGu7bVwMWY"
 CITY: Lake Forest
 STATE: CA
 ZIP: "92630"
